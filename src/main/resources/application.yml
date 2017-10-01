@@ -14,3 +14,5 @@ spring:
         show-sql: true
     thymeleaf:
         cache: false
+
+imageFilePath: D://JavaJobProject/film/src/main/webapp/static/filmImage/

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Film Info</title>
+<link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.3.3/themes/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="/static/jquery-easyui-1.3.3/themes/icon.css" />
+<script type="text/javascript" src="/static/jquery-easyui-1.3.3/jquery.min.js"></script>
+<script type="text/javascript" src="/static/jquery-easyui-1.3.3/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/static/jquery-easyui-1.3.3/locale/easyui-lang-en.js"></script>
+
+<script type="text/javascript" src="/static/ckeditor/ckeditor.js"></script>
+</head>
+<body style="margin: 10px">
+<div id="p" class="easyui-panel" title="Add Film" style="padding: 10px">
+	<form id="fm" method="post" enctype="multipart/form-data">
+		<table cellspacing="20px">
+			<tr>
+				<td width="80px">Film name：</td>
+				<td>
+					<input type="text" id="name" name="name" style="width: 400px" class="easyui-validatebox" required="true"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="80px">Title：</td>
+				<td>
+					<input type="text" id="title" name="title" style="width: 400px" class="easyui-validatebox" required="true"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="80px">Film Image：</td>
+				<td>
+					<input type="file" id="imageFile" name="imageFile" />
+				</td>
+			</tr>
+			<tr>
+				<td width="80px">Set HOT：</td>
+				<td>
+					<input type="radio" id="yes" value="1" name="hot" checked="checked"/>YES&nbsp;
+					<input type="radio" id="no" value="0" name="hot"/>NO&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">Content：</td>
+				<td>
+					<textarea id="content" name="content" rows="30" cols="80"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<a href="javascript:submitData()" class="easyui-linkbutton" data-options="iconCls:'icon-submit'">Publish</a>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+	CKEDITOR.replace("content");
+</script>
+</body>
+</html>
